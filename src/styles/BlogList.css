@@ -1,0 +1,44 @@
+/* Blog List Styles */
+.blog-list {
+  padding: 2rem 0;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.featured-section {
+  margin-bottom: 4rem;
+}
+
+.posts-section {
+  margin-bottom: 2rem;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .featured-section {
+    margin-bottom: 3rem;
+  }
+}

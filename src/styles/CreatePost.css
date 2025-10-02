@@ -1,0 +1,237 @@
+/* Create Post Styles */
+.create-post-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.create-post-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.create-post-header h2 {
+  font-family: var(--font-display);
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.create-post-header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.form-help {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+  font-family: var(--font-ui);
+}
+
+/* Post Type Selector */
+.post-type-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.post-type-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--surface);
+  font-family: var(--font-ui);
+}
+
+.post-type-option:hover {
+  border-color: var(--primary-light);
+  background: var(--surface-hover);
+}
+
+.post-type-option.selected {
+  border-color: var(--primary-color);
+  background: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.post-type-option input {
+  display: none;
+}
+
+.post-type-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-type-option span:last-child {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Content Textarea */
+.content-textarea {
+  font-family: var(--font-body) !important;
+  font-size: 1.1rem !important;
+  line-height: 1.8 !important;
+  resize: vertical;
+  min-height: 200px;
+}
+
+.content-textarea::placeholder {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.character-count {
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  font-family: var(--font-ui);
+}
+
+/* Checkbox */
+.checkbox-label {
+  display: flex !important;
+  align-items: flex-start;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  gap: 0.75rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: auto !important;
+  margin: 0;
+}
+
+.checkmark {
+  display: none; /* We'll use the default browser checkbox for simplicity */
+}
+
+.checkbox-label small {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  line-height: 1.4;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.cancel-button {
+  padding: 0.75rem 1.5rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-family: var(--font-ui);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-button:hover {
+  background: var(--surface-hover);
+  border-color: var(--text-muted);
+}
+
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  background: var(--gradient-secondary);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-family: var(--font-ui);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Error states */
+.error-message {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 0.875rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-family: var(--font-ui);
+}
+
+.error-text {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+  font-family: var(--font-ui);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .create-post-container {
+    padding: 1rem;
+  }
+
+  .post-type-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .cancel-button,
+  .submit-button {
+    width: 100%;
+    text-align: center;
+  }
+}
